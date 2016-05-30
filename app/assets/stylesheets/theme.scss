@@ -1,0 +1,104 @@
+@import "components/variables";
+
+/*
+01. BASE RULES
+*/
+
+body {
+    background: $primary-background;
+    font-family: $body-copy;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $primary-text;
+}
+
+h1 {}
+
+ul,
+ol {}
+
+li {}
+
+a,
+a:link,
+a:visited {
+    color: $primary-link-color;
+}
+
+a:hover {
+    color: $primary-link-color-hover;
+}
+
+p {}
+
+hr {}
+
+
+/*
+02. LAYOUT
+Styles specific to your layout or website
+*/
+
+li.navigation-header {
+    color: $blue1;
+    text-transform: uppercase;
+    font-size: ($font-size - 0.25);
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: $margin 0;
+    padding-left: 15px;
+}
+
+.charts,
+.panel {
+    text-align: center;
+}
+
+
+/*
+03. MODULES
+Import modules here.
+*/
+
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/modal';
+@import 'components/pills';
+@import 'components/typography';
+@import 'components/charts';
+@import 'components/panels';
+@import 'components/tables';
+@import 'components/buttons';
+
+/*
+04. STATES
+*/
+
+
+/*
+05. THEME
+*/
+
+@media (max-width: 768px) {
+    .container {
+        // padding-right: $padding;
+        // padding-left: $padding;
+    }
+    .navbar-default {
+        margin-bottom: 0;
+        .navbar-brand {
+            font-size: ($font-size * 1.7);
+            color: $white;
+            padding-left: 15px;
+        }
+    }
+    .navbar-form {
+        display: none;
+    }
+    ul.nav.navbar-nav.navbar-right {
+        display: none;
+    }
+    .charts .col-lg-4 {
+        margin-bottom: 20px;
+    }
+}

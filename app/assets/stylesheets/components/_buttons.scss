@@ -1,0 +1,15 @@
+.btn-primary {
+    background: $black;
+    border: ($border-size * 2) $border-type $blue1;
+    color: $blue1;
+}
+
+.btn-primary:hover {
+    background-color: $black;
+    border: ($border-size * 2) $border-type $blue1;
+    color: $white;
+}
+
+.panel.panel-default + .btn-primary {
+    margin-bottom: 20px;
+}

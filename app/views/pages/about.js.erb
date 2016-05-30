@@ -1,0 +1,6 @@
+$('.modal-title').text('About');
+$('#site-modal .modal-body').html("<%= j(render "about") %>").promise().done(function(){
+
+    $('#site-modal').modal("show");
+
+});

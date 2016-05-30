@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DashboardBootstrap</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/partials/header' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <%= render 'layouts/partials/sidebar' %>
+      </div>
+      <div class="col-lg-9">
+        <%= yield %>
+      </div>
+    </div>
+  </div>  
+  <%= render 'layouts/partials/footer' %>
+  <%= render 'layouts/partials/modal' %>
+
+</body>
+</html>

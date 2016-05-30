@@ -1,0 +1,6 @@
+$('.modal-title').text('Contact');
+$('#site-modal .modal-body').html("<%= j(render "contact") %>").promise().done(function(){
+
+    $('#site-modal').modal("show");
+
+});
